@@ -1,0 +1,17 @@
+{
+  "name": "Bal Pay",
+  "description": "Bal Pay",
+  "version": "0.0.1",
+  "repository": {},
+  "dependencies": {
+    # "mocha": "*",
+    # "chai": "*"
+  },
+  "scripts": {
+    # "test": "mocha",
+    # "start": "app.js"
+  },
+  "engines": {
+    # "node": "0.11.x"
+  }
+}
