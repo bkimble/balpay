@@ -1,12 +1,12 @@
 {
-  "name": "Balpay",
+  "name": "balpay",
   "description": "Balpay",
   "version": "0.0.1",
   "repository": {},
-  "dependencies": {
-  },
-  "scripts": {
-  },
-  "engines": {
-  }
+  "dependencies": {},
+  "scripts": {},
+  "engines": {},
+  "main": "./lib/balpay.js",
+  "author": "Billy kimble",
+  "license": "ISC"
 }
