@@ -3,7 +3,13 @@
   "description": "Balpay",
   "version": "0.0.1",
   "repository": {},
-  "dependencies": {},
+  "dependencies": {
+    "gerbil": "*",
+    "vcr": "0.0.4",
+    "smoking": "*",
+    "request": "*",
+    "nipple": "*"
+  },
   "scripts": {},
   "engines": {},
   "main": "./lib/balpay.js",
