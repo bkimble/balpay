@@ -1,6 +1,7 @@
 require('./test_helper.js');
 var Balpay = require('../lib/balpay.js');
 var scenario = require('gerbil').scenario;
+var replay = require("replay");
 
 var good_test_cc_num = '4444444444444444';
 var good_test_cc_exp_month = '12';
@@ -12,7 +13,7 @@ scenario("Creating a card", {
     balpay = new Balpay();
     balpay.card(good_test_cc_num, good_test_cc_exp_month, good_test_cc_exp_year, good_test_cc_cvv).then(function(card) {
       // this is an async call. need to use promises here to capture return value
-      console.log(card)
+      console.log(card);
       g.assertEqual(true, response);
       }
     );

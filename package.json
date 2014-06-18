@@ -5,10 +5,10 @@
   "repository": {},
   "dependencies": {
     "gerbil": "*",
-    "vcr": "0.0.4",
     "smoking": "*",
     "request": "*",
-    "q": "*"
+    "q": "*",
+    "replay": "*"
   },
   "scripts": {},
   "engines": {},
