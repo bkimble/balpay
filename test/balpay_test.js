@@ -10,9 +10,12 @@ var good_test_cc_cvv = '123';
 scenario("Creating a card", {
   "should succeed if the card number, expiration, and cvv are all valid": function(g){
     balpay = new Balpay();
-    var response = balpay.card(good_test_cc_num, good_test_cc_exp_month, good_test_cc_exp_year, good_test_cc_cvv);
-    // this is an async call. need to use promises here to capture return value
-    g.assertEqual(true, response);
+    balpay.card(good_test_cc_num, good_test_cc_exp_month, good_test_cc_exp_year, good_test_cc_cvv).then(function(card) {
+      // this is an async call. need to use promises here to capture return value
+      console.log(card)
+      g.assertEqual(true, response);
+      }
+    );
   }
 });
 
