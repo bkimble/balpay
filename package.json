@@ -8,7 +8,7 @@
     "vcr": "0.0.4",
     "smoking": "*",
     "request": "*",
-    "nipple": "*"
+    "q": "*"
   },
   "scripts": {},
   "engines": {},
