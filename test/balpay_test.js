@@ -29,10 +29,16 @@ scenario("Creating a card", {
   }
 });
 
-// scenario("Charging a card", {
-//   "should succeed if the card number, expiration, and cvv are all valid": function(g){
-//     balpay = new Balpay('44444444444444444','12','15','123');
-//     g.assertEqual(true, balpay.charge("34","test", "test description"));
-//   }
-// });
-// 
+scenario("Charging a card", {
+    "should succeed if the card number, expiration, and cvv are all valid": function(g){
+      balpay = new Balpay();    
+      balpay.card(good_test_cc_num, good_test_cc_exp_month, good_test_cc_exp_year, good_test_cc_cvv).then(function(card) {        
+        balpay.charge(card, "1.00", "test", "test description").then(function(output) {
+          console.log(output);
+        });
+        }
+      ).catch(function(error) {
+        raise(error);
+      });
+    }
+  });

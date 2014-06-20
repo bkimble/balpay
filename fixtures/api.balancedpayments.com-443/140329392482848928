@@ -1,0 +1,29 @@
+POST /cards/CC4RXQ6eZ6E4lkboU8MJbPbk/debits
+host: api.balancedpayments.com
+content-type: application/x-www-form-urlencoded; charset=utf-8
+body: card[href]=%2Fcards%2FCC4RXQ6eZ6E4lkboU8MJbPbk&card[id]=CC4RXQ6eZ6E4lkboU8MJbPbk&&amount=1.00&appears_as=test&description=test%20description
+
+401 HTTP/1.1
+content-type: application/json
+date: Fri, 20 Jun 2014 19:52:04 GMT
+server: ngx_openresty/1.2.6.3
+www-authenticate: Basic realm="Not permitted to perform create on debits."
+x-balanced-guru: OHM5a841e34f8b411e38ad106429171ffad
+x-balanced-host: bapi-live-prod-7nf6hx-10-3-4-216
+x-balanced-revision: 1.1
+x-balanced-software-build: 1.2.61
+content-length: 359
+connection: keep-alive
+
+{
+  "errors": [
+    {
+      "status": "Unauthorized",
+      "category_code": "authentication-required",
+      "description": "Not permitted to perform create on debits. Your request id is OHM5a841e34f8b411e38ad106429171ffad.",
+      "status_code": 401,
+      "category_type": "permission",
+      "request_id": "OHM5a841e34f8b411e38ad106429171ffad"
+    }
+  ]
+}
