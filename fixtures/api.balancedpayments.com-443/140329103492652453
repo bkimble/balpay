@@ -1,0 +1,31 @@
+POST /cards
+host: api.balancedpayments.com
+content-type: application/x-www-form-urlencoded; charset=utf-8
+body: number=4444444444444444&expiration_month=12&expiration_year=1915&security_code=123
+
+201 HTTP/1.1
+access-control-allow-headers: Content-Type
+access-control-allow-methods: POST, OPTIONS
+access-control-allow-origin: *
+content-type: application/json
+date: Fri, 20 Jun 2014 19:03:54 GMT
+server: ngx_openresty/1.2.6.3
+x-balanced-guru: OHMa002f8d8f8ad11e3a52c02a1fe53e539
+x-balanced-host: bapi-live-prod-7nf6hx-10-3-5-87
+x-balanced-revision: 1.1
+x-balanced-software-build: 1.2.59
+x-midlr-version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSVhQAQhhQEAMCFlVAFEIIFBQCHVUIVAJSAlJWDw9YV1oOBAdTUk4XAw9VSBEUB1FRAgQAWgoDXgkNUwZWDEMdQVUDCEVSPA==
+content-length: 154
+connection: keep-alive
+
+{
+  "cards": [
+    {
+      "href": "/cards/CC4RXQ6eZ6E4lkboU8MJbPbk",
+      "id": "CC4RXQ6eZ6E4lkboU8MJbPbk",
+      "links": {}
+    }
+  ],
+  "links": {}
+}
