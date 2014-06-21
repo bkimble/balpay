@@ -3,7 +3,7 @@ var Balpay = require('../lib/balpay.js');
 var scenario = require('gerbil').scenario;
 var Replay = require("replay");
 //Replay.mode = "record";
-Replay.mode = "replay";
+Replay.mode = "record";
 
 var good_test_cc_num = '4444444444444444';
 var good_test_cc_exp_month = '12';
