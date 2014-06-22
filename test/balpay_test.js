@@ -4,8 +4,8 @@ var Card = require('../lib/card.js');
 var scenario = require('gerbil').scenario;
 var Replay = require("replay");
 var smoking = require('smoking');
-//Replay.mode = "record";
-Replay.mode = "record";
+Replay.mode = "replay";
+// Replay.mode = "record";
 
 var good_test_cc_num = '4111111111111111';
 var good_test_cc_exp_month = '12';
@@ -34,13 +34,14 @@ scenario("Creating a card", {
 scenario("Charging a card", {
   "should fail if the card doesnt have access to be debited": function(g){
     balpay = new Balpay();
-
+  
     var card = smoking(Card, { id: 'CC55eeXXeeXXeeXXeeXXeeXX' });
     
-    balpay.charge(card, "1.00", "test", "test description").then(function(output) {
+    balpay.charge(card, "100", "test", "test description").then(function(output) {
       console.log(output);
     });
-  },
+  }
+  ,
     
     "should succeed if the card number, expiration, and cvv are all valid": function(g){
       balpay = new Balpay();    
