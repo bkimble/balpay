@@ -37,7 +37,7 @@ scenario("Charging a card", {
   
     var card = smoking(Card, { id: 'CC55eeXXeeXXeeXXeeXXeeXX' });
     
-    balpay.charge(card, "100", "test", "test description").then(function(output) {
+    balpay.debit(card, "100", "test", "test description").then(function(output) {
       console.log(output);
     });
   }
@@ -46,7 +46,7 @@ scenario("Charging a card", {
     "should succeed if the card number, expiration, and cvv are all valid": function(g){
       balpay = new Balpay();    
       balpay.card(good_test_cc_num, good_test_cc_exp_month, good_test_cc_exp_year, good_test_cc_cvv).then(function(card) {        
-        balpay.charge(card, "1.00", "test", "test description").then(function(output) {
+        balpay.debit(card, "1.00", "test", "test description").then(function(output) {
           console.log(output);
         });
       }
