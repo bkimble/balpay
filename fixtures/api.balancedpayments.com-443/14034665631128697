@@ -18,14 +18,14 @@ connection: keep-alive
     "debits": [
         {
             "amount": 100, 
-            "appears_on_statement_as": "BAL*Statement text", 
+            "appears_on_statement_as": "test", 
             "created_at": "2014-06-13T02:13:46.236961Z", 
             "currency": "USD", 
-            "description": "Some descriptive text for the debit in the dashboard", 
+            "description": "test description", 
             "failure_reason": null, 
             "failure_reason_code": null, 
-            "href": "/debits/WD2IYxd8AAxQT2xS8lkCTpCp", 
-            "id": "WD2IYxd8AAxQT2xS8lkCTpCp", 
+            "href": "/debits/CC55eeXXeeXXeeXXeeXXeeXX", 
+            "id": "CC55eeXXeeXXeeXXeeXXeeXX", 
             "links": {
                 "customer": "CU2306xBnLkFmS6MpARgRpjf", 
                 "dispute": null, 
