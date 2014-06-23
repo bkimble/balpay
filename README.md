@@ -1,5 +1,8 @@
 # Balance Payments:
 
+My attempt to start a better, cleaner version of the common Balanced Payments module.
+
+
 ### Usage
 --------
 
@@ -14,12 +17,16 @@
     var Balpay = require('balpay');
     var balpay = new Balpay
     var card = balpay.card(cc_num, exp_month, exp_year, cvv)
+
+  Returns: a promise containing the card that was created.
     
 ####  Debiting(charging) cards:
 
   After you have a card:
   
     var response = balpay.debit(card, amount, appears_as, description)
+
+  Returns: a promise containing the response of the charge.
   
 #### Testing
 
