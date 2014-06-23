@@ -1,4 +1,3 @@
-require('./test_helper.js');
 var Balpay = require('../lib/balpay.js');
 var Card = require('../lib/card.js');
 var scenario = require('gerbil').scenario;
@@ -45,7 +44,6 @@ scenario("Charging a card", {
       balpay = new Balpay();    
       // Mock the card. No need to create one every time.
       var card = smoking(Card, { id: 'CC4ncj7AibujfeoROHhlOJNg' });	    
-      
         balpay.debit(card, "1.00", "test", "test description").then(function(output) {
           g.assert(output.errors);
           g.assert(1, output.errors.length)
@@ -59,6 +57,9 @@ scenario("Charging a card", {
       });
     },
     "should fail when account does not have funds": function(g) {
+        // Need to find out from BalncedPayments what a denied transaction looks like. 
+        // The test credit card they give to us does not have the ability to actually
+        // debit.
         g.pending();
     }
 });

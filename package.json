@@ -9,7 +9,8 @@
     "request": "*",
     "q": "*",
     "replay": "*",
-    "sleep": "*"
+    "nodeunit": "*",
+    "mocha": "*"
   },
   "scripts": {},
   "engines": {},
